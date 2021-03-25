@@ -9,5 +9,11 @@ class Gudang extends Model
 {
     use HasFactory;
 
-    
+    protected $table = 'gudang';
+    protected $guarded = ['id'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

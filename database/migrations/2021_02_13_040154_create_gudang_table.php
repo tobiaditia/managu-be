@@ -17,7 +17,7 @@ class CreateGudangTable extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->string('nama', 60);
-            $table->string('foto', 64)->default('gudang.jpg');
+            $table->string('foto', 64)->default('gudang.jpg')->nullable();
             $table->text('deskripsi')->nullable();
             $table->timestamps();
 
